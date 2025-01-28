@@ -1,4 +1,5 @@
 import React from "react";
+import { ASSETS } from "../../assets/Data";
 
 const Colser = () => {
   return (
@@ -19,7 +20,7 @@ const Colser = () => {
           <div className="row d-flex justify-content-center flex-column align-items-center text-center">
             <div className="col-md-10 pt-4 position-relative">
               <img
-                src="../src/assets/images/video-frame.jpg"
+                src={ASSETS.video_frame}
                 className="rounded img-fluid h-100 w-100"
                 alt=""
                 srcset=""

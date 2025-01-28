@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    background: rgb(255, 255, 255);
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--main);
+    border-radius: 10px;
+}
+
 :root{
     --main: #f35525;
     --font-6: 0.6rem;
@@ -79,7 +89,7 @@ gap: 15px;
 }
 
 .icon-btn{
-    width: 80px;
+    width: 60px;
 }
 
 .nav-info i{
@@ -115,9 +125,49 @@ gap: 15px;
     background: white !important;
     width: 100%;
     z-index: 1000;
-    top: 0;
+    top: 0; 
     box-shadow: 0px 10px 15px 0px #1a1a1a3d;
 }
+
+.hop{
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.hop .navbar{
+    background: white !important;
+}
+
+.hop .drop{
+    width: 80%;
+    margin: auto;
+    background: white;
+    position: fixed !important;
+    top: 10%;
+    left: 10%;
+    z-index: 2000;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+
+.drop ol{
+    width: 100%;
+}
+
+.drop li:nth-child(1){
+    border-top: none;
+    
+}
+
+.drop li{
+    border-top: 1px solid #5f5f5f63;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+
 
 .navbar-brand{
     font-weight: bolder;
@@ -144,6 +194,10 @@ gap: 15px;
     border: none !important;
 }
 
+.drop{
+    display: none;
+}
+
 @media screen and (max-width: 992px){
     .sub-nav{
         display: none !important;
@@ -151,6 +205,14 @@ gap: 15px;
 
     .navbar form{
         display: none;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+
+    .drop{
+        display: flex;
     }
 }
 /* Navbar  */
@@ -809,6 +871,10 @@ transform: scale(0.98);
     color: #000 !important;
 }
 
+.alaa{
+    padding: 0;
+}
+
 .info-contact{
     font-size: 14px;
     line-height: 2;
@@ -852,6 +918,17 @@ transform: scale(0.98);
 .footer h4{
     font-size: 16px;
     font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer h4 {
+        font-size: 14px;
+    }
 }
 /* Footer  */
 

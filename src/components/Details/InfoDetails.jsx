@@ -1,4 +1,5 @@
 import React from "react";
+import { ASSETS } from "../../assets/Data";
 
 const InfoDetails = () => {
   return (
@@ -7,7 +8,7 @@ const InfoDetails = () => {
         <div className="row">
           <div className="col-md-8">
             <div className="detail-img">
-              <img className="img-fluid w-100" src="../src/assets/images/single-property.jpg" alt="" />
+              <img className="img-fluid w-100" src={ASSETS.single_property} alt="" />
               <div className="d-flex justify-content-between pt-2">
                 <h5 className="main-det">Apparment</h5>
               </div>
@@ -107,7 +108,7 @@ const InfoDetails = () => {
               <div className="d-flex align-items-center item">
                 <img
                   className="img-fluid"
-                  src="../src/assets/images/info-icon-01.png"
+                  src={ASSETS.info_icon_01}
                   alt=""
                 />
                 <div className="">
@@ -118,7 +119,7 @@ const InfoDetails = () => {
               <div className="d-flex align-items-center item">
                 <img
                   className="img-fluid"
-                  src="../src/assets/images/info-icon-02.png"
+                  src={ASSETS.info_icon_02}
                   alt=""
                 />
                 <div className="">
@@ -129,7 +130,7 @@ const InfoDetails = () => {
               <div className="d-flex align-items-center item">
                 <img
                   className="img-fluid"
-                  src="../src/assets/images/info-icon-03.png"
+                  src={ASSETS.info_icon_03}
                   alt=""
                 />
                 <div className="">
@@ -140,7 +141,7 @@ const InfoDetails = () => {
               <div className="d-flex align-items-center item">
                 <img
                   className="img-fluid"
-                  src="../src/assets/images/info-icon-04.png"
+                  src={ASSETS.info_icon_04}
                   alt=""
                 />
                 <div className="">

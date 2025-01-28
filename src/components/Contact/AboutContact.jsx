@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
+import { ASSETS } from "../../assets/Data";
 
 const AboutContact = () => {
   return (
@@ -9,7 +10,7 @@ const AboutContact = () => {
           <div className="row d-flex ds justify-content-between pt-5">
             <div className="col-lg-7">
               <div className="">
-                <div className="col-lg-6">
+                <div className="col-lg-6 alaa">
                   <p className="text-uppercase title-feature">| Contact Us</p>
                   <p className="feature-best">Get In Touch With Our Agents</p>
                 </div>
@@ -28,7 +29,7 @@ const AboutContact = () => {
                   className="d-flex w-100 email px-4 py-4 align-items-center">
                   <img
                     className="img-fluid"
-                    src="../src/assets/images/phone-icon.png"
+                    src={ASSETS.phone_icon}
                     alt=""
                   />
                   <div className="">
@@ -41,7 +42,7 @@ const AboutContact = () => {
                   className="d-flex w-100 email px-4 py-4 align-items-center mt-3">
                   <img
                     className="img-fluid"
-                    src="../src/assets/images/email-icon.png"
+                    src={ASSETS.email_icon}
                     alt=""
                   />
                   <div className="">

@@ -1,4 +1,5 @@
 import React from "react";
+import { ASSETS } from "../../assets/Data";
 
 const Featured = () => {
   return (
@@ -7,11 +8,11 @@ const Featured = () => {
         <div className="row">
           <div className="col-lg-4">
             <div className="position-relative">
-              <img className="img-fluid w-100 bg-img" src="../src/assets/images/featured.jpg" alt="" />
+              <img className="img-fluid w-100 bg-img" src={ASSETS.featured} alt="" />
               <div className="featured-icon position-absolute">
                 <img
                   className="img-fluid"
-                  src="../src/assets/images/featured-icon.png"
+                  src={ASSETS.featured_icon}
                   alt=""
                 />
               </div>
@@ -103,28 +104,28 @@ const Featured = () => {
           <div className="col-lg-4">
             <div className="d-flex flex-column feature-right px-4">
                 <div className="d-flex align-items-center item">
-                    <img className="img-fluid" src="../src/assets/images/info-icon-01.png" alt="" />
+                    <img className="img-fluid" src={ASSETS.info_icon_01} alt="" />
                     <div className="">
                         <h4>250 m2</h4>
                         <p>Total Flat Space</p>
                     </div>
                 </div>
                 <div className="d-flex align-items-center item">
-                    <img className="img-fluid" src="../src/assets/images/info-icon-02.png" alt="" />
+                    <img className="img-fluid" src={ASSETS.info_icon_02} alt="" />
                     <div className="">
                         <h4>Contract</h4>
                         <p> Contract Ready</p>
                     </div>
                 </div>
                 <div className="d-flex align-items-center item">
-                    <img className="img-fluid" src="../src/assets/images/info-icon-03.png" alt="" />
+                    <img className="img-fluid" src={ASSETS.info_icon_03} alt="" />
                     <div className="">
                         <h4>Payment</h4>
                         <p> Payment Process</p>
                     </div>
                 </div>
                 <div className="d-flex align-items-center item">
-                    <img className="img-fluid" src="../src/assets/images/info-icon-04.png" alt="" />
+                    <img className="img-fluid" src={ASSETS.info_icon_04} alt="" />
                     <div className="">
                         <h4>Safety</h4>
                         <p>24/7 Under Control</p>

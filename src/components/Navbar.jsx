@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router";
+import { ASSETS } from "../assets/Data";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -11,19 +12,27 @@ const Navbar = () => {
 
   useEffect(() => {
     const handelNav = () => {
+      if(window.innerWidth > 992){
+
       if (window.scrollY > 40) {
         navRef.current.classList.add("position-fixed");
       } else {
         navRef.current.classList.remove("position-fixed");
       }}
+      else{
+        navRef.current.classList.add("position-fixed");
+      }
+    }
 
+      
+      console.log(window.innerWidth);
       window.addEventListener("scroll", handelNav);
 
   },[]);
 
   
   return (
-    <div className="pt-2">
+    <div className="pt-2 father">
       {/* Top Nav  */}
       <div className="border-bottom sub-nav pb-1">
         <div className="container">
@@ -70,9 +79,10 @@ const Navbar = () => {
       {/* Top Nav  */}
 
       {/* Main Nav  */}
+      <div className="hop">
       <nav className="navbar navbar-expand-lg navbar-light py-3" ref={navRef}>
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             VILLA
           </a>
           <button
@@ -84,7 +94,7 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-           <img className="img-fluid" src={`${show ? "../src/assets/images/Icon-navbar.png" : "../src/assets/images/close.png"}`} alt="" />
+           <img className="img-fluid w-100 h-50" src={`${show ? ASSETS.bars : ASSETS.close}`} alt="" />
           </button>
           <div className="collapse navbar-collapse on" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
@@ -111,7 +121,25 @@ const Navbar = () => {
             </form>
           </div>
         </div>
+
       </nav>
+        <div className="drop">
+        <ol className={`${show ? "d-none":"d-flex flex-column"}`}>
+              <li onClick={handelSoso} className="nav-item">
+                <NavLink to={"/"}>Home</NavLink>
+              </li>
+              <li onClick={handelSoso} className="nav-item">
+                <NavLink to={"/properties"}>Properties</NavLink>
+              </li>
+              <li onClick={handelSoso} className="nav-item">
+                <NavLink to={"/details"}>Property Details</NavLink>
+              </li>
+              <li onClick={handelSoso} className="nav-item">
+                <NavLink to={"/contact"}>Contact Us</NavLink>
+              </li>
+            </ol>
+            </div>
+            </div>
       {/* Main Nav  */}
     </div>
   );
